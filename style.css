@@ -1,42 +1,90 @@
 * {
-  box-sizing: 100vh;
-  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
+
 body {
   height: 100vh;
   margin: 0;
   padding: 0;
   background: linear-gradient(45deg, #d674f9, #7e1cfc);
 }
+
 .container {
   width: min(500px, 90vw);
   background-color: #ffffff;
-  padding: 20px;
+  padding: 30px;  /* Increased padding */
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Optional: adds subtle shadow */
 }
+#riddle.caveat-text {
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-size: 24px; /* Adjust size as needed */
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
 #riddle {
   margin-bottom: 30px;
 }
-#show-answer,
+
+#show-answer, 
 #next {
   font-size: 16px;
   border: none;
   padding: 5px 20px;
   border-radius: 5px;
 }
+
 #show-answer {
   background-color: #7e1cfc;
   color: #ffffff;
 }
+
+#show-answer:hover {
+  background-color: #6615d0;
+  cursor: pointer;
+}
+
 #next {
   background-color: #ffffff;
   border: 2px solid #7e1cfc;
   color: #7e1cfc;
 }
+
+#next:hover {
+  background-color: #f8f2ff;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.caveat-text {
+  font-family: "Caveat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* ... your existing CSS ... */
+
+.caveat-text {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+#riddle, #answer {
+  margin-bottom: 20px;
+}
+
 .hide {
   display: none;
 }
